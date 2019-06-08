@@ -1,6 +1,0 @@
-framework module Pods_JIT_Qapital {
-  umbrella header "Pods-JIT_Qapital-umbrella.h"
-
-  export *
-  module * { export * }
-}

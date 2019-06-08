@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 struct Root: Decodable {
     var oldest: Date

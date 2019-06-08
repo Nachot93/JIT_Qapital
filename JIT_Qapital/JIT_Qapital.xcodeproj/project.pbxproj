@@ -8,28 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C0DAA87722A74C5D00552453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAA87622A74C5D00552453 /* AppDelegate.swift */; };
-		C0DAA87922A74C5D00552453 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAA87822A74C5D00552453 /* ViewController.swift */; };
 		C0DAA87C22A74C5D00552453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DAA87A22A74C5D00552453 /* Main.storyboard */; };
 		C0DAA87E22A74C5E00552453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0DAA87D22A74C5E00552453 /* Assets.xcassets */; };
 		C0DAA88122A74C5E00552453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DAA87F22A74C5E00552453 /* LaunchScreen.storyboard */; };
 		C0DAA88922A74C7F00552453 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAA88822A74C7F00552453 /* MainTableViewController.swift */; };
 		C0F8364922A8875400FE3A84 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F8364822A8875300FE3A84 /* MainTableViewCell.swift */; };
-		EF4E4EF4FB88D6A1D2BBB414 /* Pods_JIT_Qapital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431A21E65DE1D83F3F67A3A2 /* Pods_JIT_Qapital.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		431A21E65DE1D83F3F67A3A2 /* Pods_JIT_Qapital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JIT_Qapital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86BA95DBF0F86D416312B8EC /* Pods-JIT_Qapital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JIT_Qapital.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JIT_Qapital/Pods-JIT_Qapital.debug.xcconfig"; sourceTree = "<group>"; };
 		C0DAA87322A74C5D00552453 /* JIT_Qapital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JIT_Qapital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DAA87622A74C5D00552453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0DAA87822A74C5D00552453 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0DAA87B22A74C5D00552453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0DAA87D22A74C5E00552453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0DAA88022A74C5E00552453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0DAA88222A74C5E00552453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0DAA88822A74C7F00552453 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		C0F8364822A8875300FE3A84 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		DF77A3B6F91C59BA3227C302 /* Pods-JIT_Qapital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JIT_Qapital.release.xcconfig"; path = "Pods/Target Support Files/Pods-JIT_Qapital/Pods-JIT_Qapital.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,28 +31,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4E4EF4FB88D6A1D2BBB414 /* Pods_JIT_Qapital.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		870A9B421E31B2B8716A800E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				431A21E65DE1D83F3F67A3A2 /* Pods_JIT_Qapital.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C0DAA86A22A74C5D00552453 = {
 			isa = PBXGroup;
 			children = (
 				C0DAA87522A74C5D00552453 /* JIT_Qapital */,
 				C0DAA87422A74C5D00552453 /* Products */,
-				D3DB0500818BB1FE4C0EF19B /* Pods */,
-				870A9B421E31B2B8716A800E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				C0DAA87622A74C5D00552453 /* AppDelegate.swift */,
-				C0DAA87822A74C5D00552453 /* ViewController.swift */,
 				C0DAA87A22A74C5D00552453 /* Main.storyboard */,
 				C0DAA87D22A74C5E00552453 /* Assets.xcassets */,
 				C0DAA87F22A74C5E00552453 /* LaunchScreen.storyboard */,
@@ -85,15 +67,6 @@
 			path = JIT_Qapital;
 			sourceTree = "<group>";
 		};
-		D3DB0500818BB1FE4C0EF19B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				86BA95DBF0F86D416312B8EC /* Pods-JIT_Qapital.debug.xcconfig */,
-				DF77A3B6F91C59BA3227C302 /* Pods-JIT_Qapital.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,11 +74,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0DAA88522A74C5E00552453 /* Build configuration list for PBXNativeTarget "JIT_Qapital" */;
 			buildPhases = (
-				81CEB8BB1289ABD30932555C /* [CP] Check Pods Manifest.lock */,
 				C0DAA86F22A74C5D00552453 /* Sources */,
 				C0DAA87022A74C5D00552453 /* Frameworks */,
 				C0DAA87122A74C5D00552453 /* Resources */,
-				925742EE3E7E0245A4F90861 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,53 +133,11 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		81CEB8BB1289ABD30932555C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JIT_Qapital-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		925742EE3E7E0245A4F90861 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JIT_Qapital/Pods-JIT_Qapital-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JIT_Qapital/Pods-JIT_Qapital-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		C0DAA86F22A74C5D00552453 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0DAA87922A74C5D00552453 /* ViewController.swift in Sources */,
 				C0DAA88922A74C7F00552453 /* MainTableViewController.swift in Sources */,
 				C0F8364922A8875400FE3A84 /* MainTableViewCell.swift in Sources */,
 				C0DAA87722A74C5D00552453 /* AppDelegate.swift in Sources */,
@@ -355,7 +284,6 @@
 		};
 		C0DAA88622A74C5E00552453 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86BA95DBF0F86D416312B8EC /* Pods-JIT_Qapital.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,7 +302,6 @@
 		};
 		C0DAA88722A74C5E00552453 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF77A3B6F91C59BA3227C302 /* Pods-JIT_Qapital.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
