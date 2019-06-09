@@ -15,18 +15,18 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    var user: Users? {
-        didSet {
-//            descriptionLabel.text = user?.displayName
-//            imgView.image = user?.avatarUrl
-        }
-    }
-    var activity: Activity? {
-        didSet {
-//            descriptionLabel.text = Activity?.message
-//            imgView.image = user?.avatarUrl
-        }
-    }
+//    var user: Users? {
+//        didSet {
+////            descriptionLabel.text = user?.displayName
+////            imgView.image = user?.avatarUrl
+//        }
+//    }
+//    var activity: Activity? {
+//        didSet {
+////            descriptionLabel.text = Activity?.message
+////            imgView.image = user?.avatarUrl
+//        }
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
