@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BentonSans-Regular.otf">
+            <string>BentonSans-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Activity-->
         <scene sceneID="CKa-6P-pAN">
@@ -20,6 +25,9 @@
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="u5v-PG-nno">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="KievitCompPro-Exlig" family="KievitCompPro-Exlig" pointSize="18"/>
+                            </textAttributes>
                             <items>
                                 <navigationItem title="Activity" id="z3y-XF-6ro"/>
                             </items>
@@ -47,18 +55,18 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b02-D8-MaB" userLabel="Amount">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b02-D8-MaB" userLabel="Amount">
                                             <rect key="frame" x="299" y="18" width="60" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="lfL-we-gPt"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.38199866668265853" green="0.74558775906735753" blue="0.018409574297959527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" red="0.35578883611590872" green="0.68616418393782386" blue="0.025413488293993512" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPK-CJ-bXf" userLabel="Date">
-                                            <rect key="frame" x="60" y="55" width="28.5" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <rect key="frame" x="60" y="55" width="33" height="34"/>
+                                            <fontDescription key="fontDescription" name="BentonSans-Regular" family="BentonSans" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>

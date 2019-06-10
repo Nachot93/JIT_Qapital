@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0A7015822AD4D0100378052 /* KievitCompPro-Exlig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0A7015322AD4D0100378052 /* KievitCompPro-Exlig.ttf */; };
+		C0A7015922AD4D0100378052 /* BentonSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C0A7015422AD4D0100378052 /* BentonSans-Bold.otf */; };
+		C0A7015A22AD4D0100378052 /* BentonSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C0A7015522AD4D0100378052 /* BentonSans-Light.otf */; };
+		C0A7015B22AD4D0100378052 /* BentonSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C0A7015622AD4D0100378052 /* BentonSans-Medium.otf */; };
+		C0A7015C22AD4D0100378052 /* BentonSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C0A7015722AD4D0100378052 /* BentonSans-Regular.otf */; };
 		C0DAA87722A74C5D00552453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAA87622A74C5D00552453 /* AppDelegate.swift */; };
 		C0DAA87C22A74C5D00552453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DAA87A22A74C5D00552453 /* Main.storyboard */; };
 		C0DAA87E22A74C5E00552453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0DAA87D22A74C5E00552453 /* Assets.xcassets */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0A7015322AD4D0100378052 /* KievitCompPro-Exlig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "KievitCompPro-Exlig.ttf"; path = "Fonts/KievitCompPro-Exlig.ttf"; sourceTree = "<group>"; };
+		C0A7015422AD4D0100378052 /* BentonSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans-Bold.otf"; path = "Fonts/BentonSans-Bold.otf"; sourceTree = "<group>"; };
+		C0A7015522AD4D0100378052 /* BentonSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans-Light.otf"; path = "Fonts/BentonSans-Light.otf"; sourceTree = "<group>"; };
+		C0A7015622AD4D0100378052 /* BentonSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans-Medium.otf"; path = "Fonts/BentonSans-Medium.otf"; sourceTree = "<group>"; };
+		C0A7015722AD4D0100378052 /* BentonSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BentonSans-Regular.otf"; path = "Fonts/BentonSans-Regular.otf"; sourceTree = "<group>"; };
 		C0DAA87322A74C5D00552453 /* JIT_Qapital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JIT_Qapital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DAA87622A74C5D00552453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0DAA87B22A74C5D00552453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0A7015222AD4CF000378052 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C0A7015422AD4D0100378052 /* BentonSans-Bold.otf */,
+				C0A7015522AD4D0100378052 /* BentonSans-Light.otf */,
+				C0A7015622AD4D0100378052 /* BentonSans-Medium.otf */,
+				C0A7015722AD4D0100378052 /* BentonSans-Regular.otf */,
+				C0A7015322AD4D0100378052 /* KievitCompPro-Exlig.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		C0DAA86A22A74C5D00552453 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +78,7 @@
 		C0DAA87522A74C5D00552453 /* JIT_Qapital */ = {
 			isa = PBXGroup;
 			children = (
+				C0A7015222AD4CF000378052 /* Fonts */,
 				C0DAA87622A74C5D00552453 /* AppDelegate.swift */,
 				C0DAA87A22A74C5D00552453 /* Main.storyboard */,
 				C0DAA87D22A74C5E00552453 /* Assets.xcassets */,
@@ -126,8 +149,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0DAA88122A74C5E00552453 /* LaunchScreen.storyboard in Resources */,
+				C0A7015A22AD4D0100378052 /* BentonSans-Light.otf in Resources */,
+				C0A7015822AD4D0100378052 /* KievitCompPro-Exlig.ttf in Resources */,
+				C0A7015922AD4D0100378052 /* BentonSans-Bold.otf in Resources */,
 				C0DAA87E22A74C5E00552453 /* Assets.xcassets in Resources */,
+				C0A7015B22AD4D0100378052 /* BentonSans-Medium.otf in Resources */,
 				C0DAA87C22A74C5D00552453 /* Main.storyboard in Resources */,
+				C0A7015C22AD4D0100378052 /* BentonSans-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

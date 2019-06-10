@@ -22,22 +22,12 @@ struct Activity: Decodable {
     private enum CodingKeys : String, CodingKey { case message, amount, userId, timestamp }
 }
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController  {
     
-//    var activityList: Activities!
-//    var activity: [Activity] = []
     var activities = [Activity]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.dataSource = self
-        //        tableView.prefetchDataSource = self
-        
-        let userJSONURLString = "https://qapital-ios-testtask.herokuapp.com/users"
-        let activitiesJSONURLString = "https://qapital-ios-testtask.herokuapp.com/activities?from=2016-05-23T00:00:00+00:00&to=2019-05-23T00:00:00+00:00"
-        guard let userURL = URL(string: userJSONURLString) else { return }
-        guard let activitiesURL = URL(string: activitiesJSONURLString) else { return }
-        
+    // Connect with API
+    fileprivate func getData(_ activitiesURL: URL, _ userURL: URL) {
         URLSession.shared.dataTask(with: activitiesURL) { (data, response, err) in
             guard let data = data else { return }
             do {
@@ -47,22 +37,22 @@ class MainTableViewController: UITableViewController {
                 let result = try decoder.decode(Root.self, from: data)
                 self.activities = result.activities
                 
-                URLSession.shared.dataTask(with: userURL) { (data, response, err) in
-                    guard let data = data else { return }
-                    do {
-                        // Users
-                        let usersJson = try JSONSerialization.jsonObject(with: data, options: [])
-                        guard let jsonArray = usersJson as? [[String: Any]] else { return }
-                        
-                        for dic in jsonArray {
-                            guard let avatarUrl = dic["avatarUrl"] as? String else { return }
-                            print(avatarUrl)
-                        }
-                        
-                    } catch {
-                        print("Error serializing json: ", error)
-                    }
-                    }.resume()
+//                URLSession.shared.dataTask(with: userURL) { (data, response, err) in
+//                    guard let data = data else { return }
+//                    do {
+//                        // Users
+//                        let usersJson = try JSONSerialization.jsonObject(with: data, options: [])
+//                        guard let jsonArray = usersJson as? [[String: Any]] else { return }
+//
+//                        for dic in jsonArray {
+//                            guard let avatarUrl = dic["avatarUrl"] as? String else { return }
+//                            //                            print(avatarUrl)
+//                        }
+//
+//                    } catch {
+//                        print("Error serializing json: ", error)
+//                    }
+//                    }.resume()
             } catch {
                 print("Error serializing json: ", error)
             }
@@ -70,13 +60,38 @@ class MainTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        }.resume()
+            }.resume()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
+        
+        // URLs
+        let userJSONURLString = "https://qapital-ios-testtask.herokuapp.com/users"
+        let activitiesJSONURLString = "https://qapital-ios-testtask.herokuapp.com/activities?from=2016-05-23T00:00:00+00:00&to=2019-05-23T00:00:00+00:00"
+        guard let userURL = URL(string: userJSONURLString) else { return }
+        guard let activitiesURL = URL(string: activitiesJSONURLString) else { return }
+        
+        getData(activitiesURL, userURL)
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return activities.count
+    }
+    
+    // Get date of each activity
+    fileprivate func getDate(_ activity: Activity, _ cell: MainTableViewCell) {
+        let timeInterval = activity.timestamp.timeIntervalSinceNow
+        let date = Date(timeIntervalSinceNow: timeInterval)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateStyle = .medium
+        dateFormatter.locale = Locale.current
+        dateFormatter.doesRelativeDateFormatting = true
+        cell.dateLabel.text = dateFormatter.string(from: date)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,22 +102,17 @@ class MainTableViewController: UITableViewController {
         cell.amountLabel.text = String(format: "$%.2f", activity.amount)
         
         // Message
-        let formattedString = activity.message.htmlAttributedString().with(font:UIFont(name: "Helvetica Neue", size: 15)!)
+        let formattedString = activity.message.htmlAttributedString().with(font:UIFont(name: "BentonSans", size: 15)!)
         cell.descriptionLabel.attributedText = formattedString
-
+        
         // Date
-//        cell.dateLabel
+        getDate(activity, cell)
         
         // Avatar
         cell.imgView.image = activity.avatar
         
         return cell
     }
-    
-    // Prefetching (hace que cargue las cells a medida que vas scrolleando)
-//    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-
-//    }
 }
 
 extension String {

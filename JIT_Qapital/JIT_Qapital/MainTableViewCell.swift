@@ -21,12 +21,12 @@ class MainTableViewCell: UITableViewCell {
 ////            imgView.image = user?.avatarUrl
 //        }
 //    }
-//    var activity: Activity? {
-//        didSet {
-////            descriptionLabel.text = Activity?.message
-////            imgView.image = user?.avatarUrl
-//        }
-//    }
+    var activity: Activity? {
+        didSet {
+//            descriptionLabel.text = Activity?.message
+//            amountLabel.text = String(format: "$%.2f", activity!.amount)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
