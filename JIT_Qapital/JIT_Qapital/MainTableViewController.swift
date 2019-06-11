@@ -26,7 +26,7 @@ class MainTableViewController: UITableViewController  {
     
     var activities = [Activity]()
     
-    // Connect with API
+    // Connection with API
     fileprivate func getData(_ activitiesURL: URL, _ userURL: URL) {
         URLSession.shared.dataTask(with: activitiesURL) { (data, response, err) in
             guard let data = data else { return }
@@ -36,23 +36,6 @@ class MainTableViewController: UITableViewController  {
                 decoder.dateDecodingStrategy = .iso8601
                 let result = try decoder.decode(Root.self, from: data)
                 self.activities = result.activities
-                
-//                URLSession.shared.dataTask(with: userURL) { (data, response, err) in
-//                    guard let data = data else { return }
-//                    do {
-//                        // Users
-//                        let usersJson = try JSONSerialization.jsonObject(with: data, options: [])
-//                        guard let jsonArray = usersJson as? [[String: Any]] else { return }
-//
-//                        for dic in jsonArray {
-//                            guard let avatarUrl = dic["avatarUrl"] as? String else { return }
-//                            //                            print(avatarUrl)
-//                        }
-//
-//                    } catch {
-//                        print("Error serializing json: ", error)
-//                    }
-//                    }.resume()
             } catch {
                 print("Error serializing json: ", error)
             }
@@ -60,7 +43,7 @@ class MainTableViewController: UITableViewController  {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            }.resume()
+        }.resume()
     }
     
     override func viewDidLoad() {
@@ -94,6 +77,13 @@ class MainTableViewController: UITableViewController  {
         cell.dateLabel.text = dateFormatter.string(from: date)
     }
     
+    fileprivate func getMessage(_ activity: Activity, _ cell: MainTableViewCell) {
+        // Message
+        let message = activity.message
+        let formattedMessage = message.htmlAttributedString().with(font:UIFont(name: "BentonSans", size: 15)!)
+        cell.descriptionLabel.attributedText = formattedMessage
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! MainTableViewCell
         let activity = activities[indexPath.row]
@@ -101,9 +91,7 @@ class MainTableViewController: UITableViewController  {
         // Amount
         cell.amountLabel.text = String(format: "$%.2f", activity.amount)
         
-        // Message
-        let formattedString = activity.message.htmlAttributedString().with(font:UIFont(name: "BentonSans", size: 15)!)
-        cell.descriptionLabel.attributedText = formattedString
+        getMessage(activity, cell)
         
         // Date
         getDate(activity, cell)
